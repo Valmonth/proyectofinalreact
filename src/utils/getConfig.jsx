@@ -1,5 +1,5 @@
 const getConfig = () => ({
-    headers: { Authorization: `Bearer ${'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MjE4OTM1LCJpYXQiOjE2NTkxNDg1MzUsImp0aSI6IjA2MmZmMDM5OTM0MDRkOTA5OGNkOWZlOTQ3N2Y1M2U3IiwidXNlcl9pZCI6Mn0.3CAcJm8FndWuXn1y6hAJwnjsoF5t7ONmMjgTV4vTtR0'}` }
+    headers: { Authorization: `Bearer ${'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE5LCJpYXQiOjE2NTkxNDgzNTYsImV4cCI6MTY2NDMzMjM1Nn0.tJbVJd1XHy8b8weX0lBAO8U5HRjnQVNN2IUCUeItKKI'}` }
 });
 
 export default getConfig;
