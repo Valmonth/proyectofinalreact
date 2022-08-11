@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Hello Welcome</h1>
+      <h1>Welcome to my personal store</h1>
       <Row>
         <Col>
           <ListGroup horizontal>
@@ -59,8 +59,32 @@ const Home = () => {
           Button
         </Button>
       </InputGroup>
-
+      <div className="cards">
       {products.map((productsItem) => (
+
+      <div key={productsItem.id} className="card">
+        <div className="card-body"  onClick={() => navigate(`/productDetail/${productsItem.id}`)}
+                style={{ width: "11rem" }}>
+          <h2 >{productsItem.title}</h2>
+          <p> <img className="imgP" src={productsItem.productImgs[0]}/></p>
+          <p>Price: {productsItem.price}</p>
+          <Button
+                    onClick={() =>
+                      navigate(`/productDetail/${productsItem.id}`)
+                    }
+                    variant="primary"
+                  >
+                    Go to Detail
+                  </Button>
+        </div>
+      </div>
+
+))}
+      
+</div>
+      
+
+      {/* {products.map((productsItem) => (
         <Container key={productsItem.id}>
           <Row xs={1} md={3} className="g-4">
             <Col xs={6}>
@@ -85,7 +109,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      ))}
+      ))} */}
     </div>
   );
 };

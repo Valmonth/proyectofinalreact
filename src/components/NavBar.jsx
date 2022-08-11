@@ -25,7 +25,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/#/">Home</Nav.Link>
-            <Nav.Link href="/#/purchases">Products Detail</Nav.Link>
+            <Nav.Link href="/#/purchases">Purchases</Nav.Link>
             <Nav.Link href="/#/login">Login</Nav.Link>
           </Nav>
           <Nav.Link as={Button} onClick={handleShow}>
