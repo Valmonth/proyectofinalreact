@@ -57,3 +57,22 @@ h5 {
   width: 2.4rem;  
   margin-bottom: 3px;
 }
+
+.btnCart{
+    display: block;
+    margin-top: 20px;
+    
+}
+.addtocart{
+    width: 16rem;
+    margin-left: 10rem;
+}
+
+.imgSlider{
+    width: 1rem;
+}
+
+.despcription{
+    margin-top: 16px;
+    max-width: 45rem;
+}

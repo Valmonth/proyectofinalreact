@@ -20,10 +20,12 @@ export const getCartThunk = () => (dispatch) => {
         .finally(() => dispatch(setIsLoading(false)));
 }
 
-export const addToCart = () => (dispatch) => {
+export const addToCartThunk = addCart => (dispatch) => {
+    console.log(addCart)
     dispatch(setIsLoading(true));
-    return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/', getConfig())
-        .then(() => dispatch(/* action */))
+    return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', addCart, getConfig())
+        .then(() => dispatch(getCartThunk()))
+       
         .finally(() => dispatch(setIsLoading(false)));
 }
 export const { setCart  } = cartSlice.actions;

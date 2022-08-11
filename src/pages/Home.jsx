@@ -56,7 +56,7 @@ const Home = () => {
           variant="outline-secondary"
           onClick={() => dispatch(filterProductsThunk(searchValue))}
         >
-          Button
+          Search Products
         </Button>
       </InputGroup>
       <div className="cards">
@@ -84,32 +84,7 @@ const Home = () => {
 </div>
       
 
-      {/* {products.map((productsItem) => (
-        <Container key={productsItem.id}>
-          <Row xs={1} md={3} className="g-4">
-            <Col xs={6}>
-              <Card
-                onClick={() => navigate(`/productDetail/${productsItem.id}`)}
-                style={{ width: "11rem" }}
-              >
-                <Card.Img variant="top" src={productsItem.productImgs[0]} />
-                <Card.Body>
-                  <Card.Title>{productsItem.title}</Card.Title>
-                  <Card.Text>{productsItem.price}</Card.Text>
-                  <Button
-                    onClick={() =>
-                      navigate(`/productDetail/${productsItem.id}`)
-                    }
-                    variant="primary"
-                  >
-                    Go to Detail
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      ))} */}
+      
     </div>
   );
 };
