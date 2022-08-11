@@ -15,6 +15,7 @@ const NavBar = () => {
   useEffect(() => {
     
   }, []);
+  let cat = localStorage.getItem('token');
 
   return (
     <>
@@ -26,7 +27,9 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="/#/">Home</Nav.Link>
             <Nav.Link href="/#/purchases">Purchases</Nav.Link>
-            <Nav.Link href="/#/login">Login</Nav.Link>
+            
+            {cat ? <Nav.Link href="/#/login">Log Out</Nav.Link> : <Nav.Link href="/#/login">Login</Nav.Link>}
+            
           </Nav>
           <Nav.Link as={Button} onClick={handleShow}>
                Cart

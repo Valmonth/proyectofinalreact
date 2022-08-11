@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from "react-router-dom";
-import { getCartThunk } from '../store/slices/cart.slice';
+import { buyToCart, getCartThunk } from '../store/slices/cart.slice';
 
 const Cart = ({ show, handleClose }) => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const Cart = ({ show, handleClose }) => {
             </li>
           ))}
           </ul>
+          <Button variant="outline-success" onClick={() => dispatch(buyToCart())}>Check Out</Button>{' '}
         </Offcanvas.Body>
       </Offcanvas>
         </div>
