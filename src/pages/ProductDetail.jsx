@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getProducts } from '../store/slices/products.slice';
+import { Button, Form, InputGroup } from "react-bootstrap";
 
 const ProductDetail = () => {
     const allProducts = useSelector((state) => state.products);
@@ -20,12 +21,26 @@ const ProductDetail = () => {
       }, [allProducts]);
 
       console.log(productDetail)
+
+      const addToCart = () => {
+        alert("Añadido a favoritos");
+        const addCart = {
+          
+        };
+        console.log(favorite);
+      };
+
     return (
         <div>
-            <h1>Product Detail</h1>
+    
+
+            <h1>Products to sale</h1>
            <h3>{productDetail?.title}</h3> 
            <p> {productDetail?.price}</p>
            <p>{productDetail?.description}</p>
+           
+
+           
         </div>
     );
 };

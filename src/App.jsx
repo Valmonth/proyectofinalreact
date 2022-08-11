@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Home, Login, ProductDetail,Purchases } from "./pages";
-import { NavBar, LoadingScreen } from "./components";
+import { NavBar, LoadingScreen, ProtectedRoutes } from "./components";
 import { useSelector } from 'react-redux';
 function App() {
   
@@ -17,7 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/productDetail/:id' element={<ProductDetail/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route element={<ProtectedRoutes />}>
         <Route path='/Purchases' element={<Purchases/>}/>
+        </Route>
+        
       </Routes>
     </HashRouter>
   )

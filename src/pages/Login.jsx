@@ -8,13 +8,17 @@ const Login = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
-
+    
     const submit = (data) => {
         axios
           .post("https://ecommerce-api-react.herokuapp.com/api/v1/users/login", data)
-          .then((res) => navigate("/"))
+          .then((res) => {
+            navigate("/");
+  
+            localStorage.setItem("token", res.data.data.token);
+          })
           .catch((error) => {
-            if (error.response.status === 401) {
+            if (error.response.status === 404) {
               alert("Credenciales inválidas");
             }
             console.log(error.response);
