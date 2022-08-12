@@ -17,7 +17,7 @@ export const PurchasesSlice = createSlice({
 export const getPurchasesThunk = () => (dispatch) => {
     dispatch(setIsLoading(true));
     return axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/purchases', getConfig())
-        .then(res => dispatch(setPurchases(res.data.data.purchases)))
+        .then(res => dispatch(setPurchases(res.data?.data?.purchases)))
         .finally(() => dispatch(setIsLoading(false)));
 }
 

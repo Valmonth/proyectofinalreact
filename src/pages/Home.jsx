@@ -69,7 +69,7 @@ const Home = () => {
       <div key={productsItem.id} className="card">
         <div className="card-body"  onClick={() => navigate(`/productDetail/${productsItem.id}`)}
                 style={{ width: "11rem" }}>
-          <h2 >{productsItem.title}</h2>
+          <h2 className="ptitle">{productsItem.title}</h2>
           <p> <img className="imgP" src={productsItem.productImgs[0]}/></p>
           <p>Price: {productsItem.price}</p>
           <Button

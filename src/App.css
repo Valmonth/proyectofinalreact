@@ -54,7 +54,8 @@ h5 {
 }
 
 .imgP{
-  width: 2.4rem;  
+  width: 3.4rem;  
+  padding: auto;
   margin-bottom: 3px;
 }
 
@@ -101,4 +102,8 @@ h5 {
 .title{
   font-size: 15px;
   margin: 10px;
+}
+
+.ptitle{
+  color: red;
 }
