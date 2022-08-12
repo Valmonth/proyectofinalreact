@@ -28,8 +28,10 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Welcome to my personal store</h1>
-      <Row>
+      <h1 className='welcome'>Welcome to my personal store</h1>
+      <div className='rower'>
+      <Row >
+        <h3 className='title'>Searh by category:</h3>
         <Col>
           <ListGroup horizontal>
             {categories.map((category) => (
@@ -43,8 +45,8 @@ const Home = () => {
           </ListGroup>
         </Col>
       </Row>
-
-      <InputGroup className="mb-3">
+      </div>
+      <InputGroup className="mb-3 inputis">
         <Form.Control
           placeholder="Product Search"
           aria-label="Product Search"
@@ -59,6 +61,8 @@ const Home = () => {
           Search Products
         </Button>
       </InputGroup>
+
+
       <div className="cards">
       {products.map((productsItem) => (
 

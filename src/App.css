@@ -76,3 +76,29 @@ h5 {
     margin-top: 16px;
     max-width: 45rem;
 }
+
+.inputis{
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  max-width: 40rem;
+}
+
+.welcome{
+  margin: 16px;
+  text-align: center;
+  font-size: 29px;
+}
+
+.rower{
+ 
+  margin-top: 10px;
+}
+
+.title{
+  font-size: 15px;
+  margin: 10px;
+}
