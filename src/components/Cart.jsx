@@ -4,6 +4,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from "react-router-dom";
 import { buyToCart, getCartThunk } from '../store/slices/cart.slice';
+import { getPurchasesThunk } from '../store/slices/purchases.slice';
 
 const Cart = ({ show, handleClose }) => {
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const Cart = ({ show, handleClose }) => {
   const carts = useSelector(state => state.cart)
     useEffect(()=>{
       dispatch(getCartThunk());
+      dispatch(getPurchasesThunk());
     },[])
     
     return (
